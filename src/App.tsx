@@ -3,11 +3,13 @@ import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import Widgets from "./components/widgets/Widgets";
 import styled from "styled-components";
+import Timeline from "./components/timeline/Timeline";
 
 function App() {
     return (
         <SApp>
             <Sidebar />
+            <Timeline />
             <Widgets />
         </SApp>
     );

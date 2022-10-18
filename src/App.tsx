@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
+import Widgets from "./components/widgets/Widgets";
 import styled from "styled-components";
 
 function App() {
     return (
         <SApp>
             <Sidebar />
+            <Widgets />
         </SApp>
     );
 }

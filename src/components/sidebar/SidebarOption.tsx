@@ -1,16 +1,18 @@
+import { SvgIconProps } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 
-type propsType = {
+type PROPS = {
     text: string;
-    icon: string;
+    Icon: any;
 };
 
-const SidebarOption: React.FC<propsType> = (props) => {
-    const { text, icon } = props;
+const SidebarOption: React.FC<PROPS> = (props) => {
+    const { text, Icon } = props;
     return (
         <Sdiv>
-            <p>{`${text}:${icon}`}</p>
+            <Icon />
+            <p>{text}</p>
         </Sdiv>
     );
 };

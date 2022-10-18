@@ -10,18 +10,32 @@ type PROPS = {
 const SidebarOption: React.FC<PROPS> = (props) => {
     const { text, Icon } = props;
     return (
-        <Sdiv>
+        <SSidebarOption>
             <Icon />
-            <p>{text}</p>
-        </Sdiv>
+            <h2>{text}</h2>
+        </SSidebarOption>
     );
 };
 
-const Sdiv = styled.div`
-    width: 80%;
-    margin-inline: auto;
-    border: 1px solid blue;
-    background-color: gray;
+const SSidebarOption = styled.div`
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.15s ease-out;
+    margin-left: 20px;
+    &:hover {
+        background-color: #e8f5fe;
+        border-radius: 30px;
+        color: var(--app-color);
+    }
+    .MuiSvgIcon-root {
+        padding-right: 20px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-right: 20px;
+        font-weight: 800;
+    }
 `;
 
 export default SidebarOption;

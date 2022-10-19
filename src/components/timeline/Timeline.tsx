@@ -1,5 +1,6 @@
 import Post from "./Post";
 import TweetBox from "./TweetBox";
+import styled from "styled-components";
 
 type POST = {
     displayName: string;
@@ -19,10 +20,10 @@ const userPost: POST = {
 
 const Timeline: React.FC = () => {
     return (
-        <div>
-            <div>
+        <STimeline>
+            <STimelineHeader>
                 <h2>ホーム</h2>
-            </div>
+            </STimelineHeader>
             <TweetBox />
             <Post
                 displayName={userPost.displayName}
@@ -31,7 +32,27 @@ const Timeline: React.FC = () => {
                 avatar={userPost.avatar}
                 image={userPost.image}
             />
-        </div>
+        </STimeline>
     );
 };
+
+const STimeline = styled.div`
+    fled: 0.45;
+    border-right: 1px solid var(--app-background);
+    overflow-y: scroll;
+`;
+
+const STimelineHeader = styled.div`
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--app-background);
+    padding: 5px 20px;
+    > h2 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+`;
+
 export default Timeline;

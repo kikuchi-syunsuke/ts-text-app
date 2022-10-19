@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import Widgets from "./components/widgets/Widgets";
 import styled from "styled-components";
@@ -20,6 +19,8 @@ const SApp = styled.div`
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 10px;
+    --app-color: #50b7f5;
+    --app-background: #e6ecf0;
 `;
 
 export default App;
